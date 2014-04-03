@@ -16,11 +16,14 @@ h1{
 .addInput{
 	position:fixed;
 	top: 500px;
+	right: 510px;
+	width: 150px;
 }
 
 .addButton{
 	position:fixed;
-	top : 450px;
+	top : 500px;
+	right: 470px;
 }
 
 .mainContent{
