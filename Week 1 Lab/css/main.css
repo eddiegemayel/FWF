@@ -10,7 +10,7 @@ h1{
 #removeAll{
 	position: fixed;
 	top : 570px;
-	left: 740px;
+	left: 750px;
 }
 
 .addInput{
@@ -42,6 +42,9 @@ h1{
 
 .error{
 	color: #BF4D4D;
+	position: fixed;
+	top: 520px;
+	right: 480px;
 }
 
 .inputs{
