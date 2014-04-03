@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div class="mainContent" ng-app ng-controller="controller">
-			<h2>Shopping List</h2>
+			<h1>Shopping List</h1>
 			<ul>
 				<li ng-repeat="anItem in items track by $index">
 					<input type="checkbox" ng-model="anItem.purchased"/>{{anItem.label}}

@@ -3,6 +3,10 @@ body{
 	font-family: Verdana;
 }
 
+h1{
+	font-family: "Helvetica Nueue";
+}
+
 .mainContent{
 	border:2px solid;
 	border-radius: 15px;
@@ -13,10 +17,13 @@ body{
 	padding-bottom: 5px;
 	background: url(../images/metal.png);
 	/*background-color: #bfd;*/
+	box-shadow: 1px 2px 2px;
 }
 
 .error{
 	color: #BF4D4D;
 }
 
-.inputs{}
+.inputs{
+	vertical-align: middle;
+}
