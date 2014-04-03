@@ -13,6 +13,16 @@ h1{
 	left: 740px;
 }
 
+.addInput{
+	position:fixed;
+	top: 500px;
+}
+
+.addButton{
+	position:fixed;
+	top : 450px;
+}
+
 .mainContent{
 	border:2px solid;
 	border-radius: 15px;
