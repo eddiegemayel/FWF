@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First Angular App</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body ng-app>
+		<div ng-controller="myListController">
+			<ul>
+				<li ng-repeat="theTask in tasks track by $index"><!-- repeat, take the task that is inside of the array tasks, and display the label -->
+				<input type="checkbox" ng-model="theTask.isCompleted"/>{{theTask.label}}
+				</li>
+			</ul>
+
+			<form>
+				<input ng-model="newTask" type="text"/>
+				<button ng-click="pushToArray(newTask)">Add</button>
+			</form>
+			<p>{{content}}</p>
+		</div>
+	</body>
+</html>

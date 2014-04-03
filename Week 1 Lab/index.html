@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 1 Shopping List</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div class="mainContent" ng-app ng-controller="controller">
+			<h2>Shopping List</h2>
+			<ul>
+				<li ng-repeat="anItem in items track by $index">
+					<input type="checkbox" ng-model="anItem.purchased"/>{{anItem.label}}
+					<button ng-click="removeItem($index)">X</button>
+				</li>
+			</ul>
+			<div class="inputs">
+				<input type="text" ng-model="hork"/>
+			
+				<input type="button" value="Add Item To List" ng-click="addItem(hork)"/> <br/>
+
+				<p class="error">{{content}}</p>
+
+				<input type="button" value="Clear Purchased (checkboxed) items." ng-click="removePurchased($index)"/>
+			</div>
+		</div>
+	</body>
+</html>

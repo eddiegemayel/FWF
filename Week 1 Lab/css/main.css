@@ -1,0 +1,23 @@
+body{
+	background: url(../images/skulls.png);
+	font-family: Verdana;
+}
+
+.mainContent{
+	border:2px solid;
+	border-radius: 15px;
+	width: 500px;
+	height: 600px;
+	margin:0 auto;
+	padding-left:10px;
+	padding-bottom: 5px;
+	background: url(../images/metal.png);
+	/*background-color: #bfd;*/
+}
+
+.error{
+	color: #BF4D4D;
+}
+
+.inputs{}
+
