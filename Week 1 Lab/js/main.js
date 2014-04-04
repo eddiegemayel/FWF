@@ -13,6 +13,7 @@ theApp.controller("controller", function($scope, dataService){
 
 		} else {
     		$scope.content = "Empty input field!";
+    		
     		//console.log("Empty input field");
 		}
 	}
