@@ -14,18 +14,20 @@ angular.module("myApp").service("dataService", function(){
 	}
 
 	this.addItem = function(newItem){
-			if(newItem.length > 0){
-				items.push({label:newItem, purchased: false});
-				//add new item
+		if (undefined !== newItem && newItem.length) {
+    		items.push({label:newItem, purchased: false});
+			//add new item
 
-				var itemString = JSON.stringify(items);
-				//stringify the now new array
-				localStorage.setItem("itemLS", itemString);
-				//store it in local storage
-			}
-			else{
-				content = "Empty Input Field!";
-			}
+			var itemString = JSON.stringify(items);
+			//stringify the now new array
+			localStorage.setItem("itemLS", itemString);
+			//store it in local storage
+
+		} else {
+    		//content = "Empty input field!";
+    		//console.log("Empty input field");
+		}
+			
 	}
 
 	this.removeAnItem = function(index){
