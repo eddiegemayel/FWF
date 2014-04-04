@@ -10,19 +10,14 @@ theApp.controller("controller", function($scope, dataService){
 		$scope.content = "";
 	}
 
+	$scope.removeItem = function($index){
+		dataService.removeAnItem($index);
+	}
+
 	$scope.removePurchased = function(){
 		dataService.removeChecked();
 	}
 });
-
-// function controller($scope){
-// 	$scope.items =[
-// 		{label:"Eggs" , purchased: false},
-// 		{label:"Bread" , purchased: false},
-// 		{label:"Milk" , purchased: true}
-// 	];
-// 	//array of items in the shopping cart
-
 	
 
 // 	//when clicked add an item
