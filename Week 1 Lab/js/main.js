@@ -5,15 +5,9 @@ theApp.controller("controller", function($scope, dataService){
 	$scope.items = dataService.getCartItems();
 
 	$scope.addAnItem = function(){
-		if($scope.hork > 0){
-			dataService.addItem($scope.hork);
-			$scope.hork="";
-			$scope.content = "";
-		}
-		else{
-			$scope.content = "Empty Input Field!";
-		}
-		
+		dataService.addItem($scope.hork);
+		$scope.hork="";
+		$scope.content = "";
 	}
 
 	$scope.removeItem = function($index){
@@ -25,7 +19,7 @@ theApp.controller("controller", function($scope, dataService){
 	}
 });
 
-
+//Working code before service file was added------------------------------------------------
 // function controller($scope){
 // 	$scope.items =[
 // 		{label:"Eggs" , purchased: false},

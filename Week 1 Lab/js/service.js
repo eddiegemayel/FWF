@@ -14,14 +14,15 @@ angular.module("myApp").service("dataService", function(){
 	}
 
 	this.addItem = function(newItem){
+		
+			items.push({label:newItem, purchased: false});
+			//add new item
 
-		items.push(newItem);
-		//add new item
-
-		var itemString = JSON.stringify(items);
-		//stringify the now new array
-		localStorage.setItem("itemLS", itemString);
-		//store it in local storage
+			var itemString = JSON.stringify(items);
+			//stringify the now new array
+			localStorage.setItem("itemLS", itemString);
+			//store it in local storage
+		
 	}
 
 	this.removeAnItem = function(index){
