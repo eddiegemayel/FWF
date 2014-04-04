@@ -27,7 +27,6 @@ angular.module("myApp").service("dataService", function(){
     		//content = "Empty input field!";
     		//console.log("Empty input field");
 		}
-			
 	}
 
 	this.removeAnItem = function(index){

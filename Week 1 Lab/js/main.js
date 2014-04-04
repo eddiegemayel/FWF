@@ -4,10 +4,17 @@ theApp.controller("controller", function($scope, dataService){
 
 	$scope.items = dataService.getCartItems();
 
-	$scope.addAnItem = function(){
-		dataService.addItem($scope.hork);
-		$scope.hork="";
-		// $scope.content = "";
+	$scope.addAnItem = function(newItem){
+	
+		if (undefined !== newItem && newItem.length) {
+    			dataService.addItem($scope.hork);
+				$scope.hork="";
+				$scope.content = "";
+
+		} else {
+    		$scope.content = "Empty input field!";
+    		//console.log("Empty input field");
+		}
 	}
 
 	$scope.removeItem = function($index){
