@@ -7,7 +7,7 @@ theApp.controller("controller", function($scope, dataService){
 	$scope.addAnItem = function(){
 		dataService.addItem($scope.hork);
 		$scope.hork="";
-		$scope.content = "";
+		// $scope.content = "";
 	}
 
 	$scope.removeItem = function($index){
