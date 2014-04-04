@@ -5,9 +5,15 @@ theApp.controller("controller", function($scope, dataService){
 	$scope.items = dataService.getCartItems();
 
 	$scope.addAnItem = function(){
-		dataService.addItem($scope.hork);
-		$scope.hork="";
-		$scope.content = "";
+		if($scope.hork > 0){
+			dataService.addItem($scope.hork);
+			$scope.hork="";
+			$scope.content = "";
+		}
+		else{
+			$scope.content = "Empty Input Field!";
+		}
+		
 	}
 
 	$scope.removeItem = function($index){
@@ -18,6 +24,16 @@ theApp.controller("controller", function($scope, dataService){
 		dataService.removeChecked();
 	}
 });
+
+
+// function controller($scope){
+// 	$scope.items =[
+// 		{label:"Eggs" , purchased: false},
+// 		{label:"Bread" , purchased: false},
+// 		{label:"Milk" , purchased: true}
+// 	];
+// 	//array of items in the shopping cart
+
 	
 
 // 	//when clicked add an item

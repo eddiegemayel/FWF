@@ -15,23 +15,13 @@ angular.module("myApp").service("dataService", function(){
 
 	this.addItem = function(newItem){
 
-		//as long as the input field isnt empty, add something
-		if(newItem.length > 0){
-			//push to array
-			items.push({label:newItem, purchased: false});
+		items.push(newItem);
+		//add new item
 
-			var itemString = JSON.stringify(items);
-			//stringify the now new array
-
-			localStorage.setItem("itemLS", itemString);
-			//store it in local storage
-		}
-		//if else display error
-		else{
-			$scope.content = "Empty Input Field!";
-		}
-
-		
+		var itemString = JSON.stringify(items);
+		//stringify the now new array
+		localStorage.setItem("itemLS", itemString);
+		//store it in local storage
 	}
 
 	this.removeAnItem = function(index){
@@ -42,7 +32,13 @@ angular.module("myApp").service("dataService", function(){
 		localStorage.setItem("itemLS", itemString);
 	}
 
-	this.removeChecked = function(deadIdx){
-		items.splice(deadIdx,1);
+
+	this.removeChecked = function(){
+		for(var i = items.length-1; i>=0; i--){
+				if(items[i].purchased == true){
+					items.splice(i,1);
+				}
+		}
 	}
+	
 });
