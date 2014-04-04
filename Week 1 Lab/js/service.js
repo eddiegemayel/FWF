@@ -37,6 +37,9 @@ angular.module("myApp").service("dataService", function(){
 		for(var i = items.length-1; i>=0; i--){
 				if(items[i].purchased == true){
 					items.splice(i,1);
+					var itemString = JSON.stringify(items);
+
+					localStorage.setItem("itemLS", itemString);
 				}
 		}
 	}
