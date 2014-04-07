@@ -7,6 +7,12 @@ h1{
 	font-family: 'Coda Caption', sans-serif;
 }
 
+ul{
+	margin: 0;
+padding: 0;
+color: white;
+}
+
 #removeAll{
 	position: fixed;
 	top : 570px;
@@ -16,6 +22,7 @@ h1{
 .button{
 	position: fixed;
 	right: 500px;
+	/*float: right;*/
 }
 
 .addInput{
