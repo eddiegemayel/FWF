@@ -6,6 +6,9 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/service.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<!-- Below is the code for Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Coda+Caption:800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div class="mainContent" ng-app="myApp" ng-controller="controller">
@@ -13,7 +16,7 @@
 			<ul>
 				<li ng-repeat="anItem in items track by $index">
 					<input type="checkbox" ng-model="anItem.purchased"/>{{anItem.label}}
-					<button ng-click="removeItem($index)">X</button>
+					<button class="button" ng-click="removeItem($index)">X</button>
 				</li>
 			</ul>
 			<div class="inputs">

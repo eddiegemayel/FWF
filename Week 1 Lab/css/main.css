@@ -1,16 +1,21 @@
 body{
 	background: url(../images/skulls.png);
-	font-family: Verdana;
+	font-family: 'Lemon', cursive;
 }
 
 h1{
-	font-family: "Helvetica Nueue";
+	font-family: 'Coda Caption', sans-serif;
 }
 
 #removeAll{
 	position: fixed;
 	top : 570px;
 	left: 750px;
+}
+
+.button{
+	position: fixed;
+	right: 500px;
 }
 
 .addInput{

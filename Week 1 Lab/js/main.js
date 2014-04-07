@@ -5,7 +5,6 @@ theApp.controller("controller", function($scope, dataService){
 	$scope.items = dataService.getCartItems();
 
 	$scope.addAnItem = function(newItem){
-	
 		if (undefined !== newItem && newItem.length) {
     			dataService.addItem($scope.hork);
 				$scope.hork="";
@@ -13,7 +12,6 @@ theApp.controller("controller", function($scope, dataService){
 
 		} else {
     		$scope.content = "Empty input field!";
-    		
     		//console.log("Empty input field");
 		}
 	}
