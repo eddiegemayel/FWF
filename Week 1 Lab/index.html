@@ -15,8 +15,8 @@
 			<h1>Your Shopping List!</h1>
 			<ul>
 				<li ng-repeat="anItem in items track by $index">
-					<input type="checkbox" ng-model="anItem.purchased"/>{{anItem.label}}
-					<button class="button" ng-click="removeItem($index)">X</button>
+					<input type="checkbox" ng-model="anItem.purchased" title="Purchased?"/>{{anItem.label}}
+					<button class="button" ng-click="removeItem($index)" title="Remove Item">X</button>
 				</li>
 			</ul>
 			<div class="inputs">
