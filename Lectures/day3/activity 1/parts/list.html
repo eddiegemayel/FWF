@@ -1,6 +1,7 @@
 <h2>This is the List View</h2>
  <ul>
             <li ng-repeat="meal in tacos track by $index">
-                {{meal.type}}<button ng-click="killTaco($index)">DEFF</button>
+            	<a href="#/detail/{{$index}}">{{meal.type}}</a>
+               <button ng-click="killTaco($index)">DEFF</button>
             </li>
 </ul>

@@ -10,11 +10,20 @@ thing.config(function($routeProvider){
 			{templateUrl:"parts/input.html", 
 			controller: "InputController"})
 
+			.when("/detail/:itemIndex",
+			{templateUrl:"parts/detail.html", 
+			controller: "DetailController"})
+
 			.otherwise({
 				redirectedTo:"/list"
 			});
 
 	});
+
+thing.controller("DetailController", function($scope, tacoService, $routeParams){
+	$scope.taco = tacoService.getTacoAt($routeParams.itemIndex);
+});
+
 
 thing.controller("ListController", function($scope, tacoService){
 	$scope.tacos = tacoService.getTacos();
@@ -30,6 +39,7 @@ thing.controller("InputController", function($scope, tacoService){
 	 $scope.addTaco = function(){
         tacoService.addTacos($scope.tacoType);
         document.location.hash = "#/list";
+        //takes everything including hash and lets you add anything you want after
     }
 });
 

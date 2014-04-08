@@ -5,6 +5,11 @@ angular.module("tacoApp").service("tacoService",function(){
         tacos=tacosLS;
         return tacos;
     }
+
+    this.getTacoAt = function(tacoIdx){
+        this.getTacos();
+        return tacos[tacoIdx];
+    }
     
     this.addTacos = function(newTaco) {
         tacos.push({type:newTaco});
