@@ -1,22 +1,21 @@
-angular.module("myNewApp").service("dataService", function(){
-	var sodas = ["Coke", "Pepsi", "Mountain Dew", "Dr. Pepper"];
-
-	this.getDrinks = function(){
-		//parse it into local storage
-		var sodaString = localStorage.getItem("sodaLS");
-		sodas = JSON.parse(sodaString) || sodas;
-
-		return sodas;
-	}
-
-	this.addDrink = function(newDrink){
-		sodas.push(newDrink);
-		//sodas.push({type:newDrink});
-		//if it was an object this is how you would push it
-
-		var sodaString = JSON.stringify(sodas);
-		localStorage.setItem("sodaLS", sodaString);
-		//or
-		//localStorage.setItem("sodaLS", JSON.stringify(sodas));
-	}
+angular.module("tacoApp").service("tacoService",function(){
+    var tacos = [{type:"Fish"},{type:"Beef"},{type:"Chicken"}];
+    this.getTacos = function(){
+        var tacosLS = JSON.parse(localStorage.getItem("tacoList")) || tacos;
+        tacos=tacosLS;
+        return tacos;
+    }
+    
+    this.addTacos = function(newTaco) {
+        tacos.push({type:newTaco});
+        localStorage.setItem("tacoList", JSON.stringify(tacos));
+        
+    }
+    
+    this.delTaco = function(whatever){
+        tacos.splice(whatever,1);
+        localStorage.setItem("tacoList", JSON.stringify(tacos));
+        
+    }
+    
 });
