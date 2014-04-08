@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Day 3</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+	</head>
+	<body ng-app="myNewApp" ng-controller="myFirstController">
+			<h1>Lecture 3</h1>
+			<p>{{content}}</p>
+
+			<ul>
+				<li ng-repeat="can in sodas track by $index">
+					{{can}}
+				</li>
+			</ul>
+
+			<p>Add a soda...</p>
+			<input type="text" ng-model="sodaInput"/>
+			<button ng-click="pourSoda()">Save</button>
+	</body>
+</html>

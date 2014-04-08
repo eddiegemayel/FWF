@@ -26,6 +26,11 @@ theApp.controller("controller", function($scope, dataService){
 });
 
 //Working code before service file was added------------------------------------------------
+//
+//
+//
+//
+//
 // function controller($scope){
 // 	$scope.items =[
 // 		{label:"Eggs" , purchased: false},

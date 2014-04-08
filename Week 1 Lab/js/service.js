@@ -6,11 +6,14 @@ angular.module("myApp").service("dataService", function(){
 	];
 	//array of items in the shopping cart
 
+	//this function returns the items in the cart currently
 	this.getCartItems = function(){
+		//store local storage in a variable
 		var itemString = localStorage.getItem("itemLS");
 		items = JSON.parse(itemString) || items;
 
 		return items;
+
 	}
 
 	this.addItem = function(newItem){
@@ -48,5 +51,4 @@ angular.module("myApp").service("dataService", function(){
 				}
 		}
 	}
-	
 });
