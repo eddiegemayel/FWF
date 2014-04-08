@@ -33,6 +33,7 @@ angular.module("myApp").service("dataService", function(){
 	}
 
 	this.removeAnItem = function(index){
+		//at the index, splice 1 item
 		items.splice(index,1);
 
 		var itemString = JSON.stringify(items);
