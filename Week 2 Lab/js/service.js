@@ -37,4 +37,10 @@ angular.module("CarApp").service("carService", function(){
         
     document.location.hash = "#/list";
     };
+
+    this.getCarAt = function(carIndex){
+        this.getCars();
+        return cars[carIndex];
+    }
+     
 });
