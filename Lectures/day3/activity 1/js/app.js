@@ -6,17 +6,17 @@ thing.config(function($routeProvider){
 		{templateUrl:"parts/list.html", 
 		controller: "ListController"})
 
-		.when("/input",
-			{templateUrl:"parts/input.html", 
-			controller: "InputController"})
+	.when("/input",
+		{templateUrl:"parts/input.html", 
+		controller: "InputController"})
 
-			.when("/detail/:itemIndex",
-			{templateUrl:"parts/detail.html", 
-			controller: "DetailController"})
+	.when("/detail/:itemIndex",
+	{templateUrl:"parts/detail.html", 
+	controller: "DetailController"})
 
-			.otherwise({
-				redirectedTo:"/list"
-			});
+	.otherwise({
+		redirectedTo:"/list"
+	});
 
 	});
 
