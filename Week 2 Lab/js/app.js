@@ -2,7 +2,7 @@ var app = angular.module("CarApp", ["ngRoute"]);
 
 app.config(function($routeProvider){
     $routeProvider
-    .when("/listView",
+    .when("/list",
           {templateUrl: "parts/list.html" ,
             controller: "theList"
           }
@@ -17,24 +17,24 @@ app.config(function($routeProvider){
             controller: "theAdd"
           }
          )
-    .otherwise({redirectTo: "/listView"})
+    .otherwise({redirectTo: "/list"})
 });
 
 
 app.controller("theList", function($scope, carService){
-    $scope.cars = carService.getcars();
-    $scope.pewpew=function(index){
-        carService.killcar(index);
+    $scope.cars = carService.getCars();
+   $scope.delete=function(index){
+        carService.deleteCar(index);
     };
 });
 
-app.controller("theDetail", function($scope,carService, $routeParams){
+app.controller("theDetail", function($scope, carService, $routeParams){
     $scope.car = carService.getcarAt($routeParams.carIndex);
 });
 
 app.controller("theAdd", function($scope,carService){
     // $scope.testSubject ="vic";
-    $scope.addNoob=function(){
-    	carService.addStud({name:$scope.repName,age:$scope.repAge,GPA:$scope.repGPA})
+    $scope.addCar=function(){
+    	carService.addCar({make:$scope.make, model:$scope.model,color:$scope.color})
     };
 });

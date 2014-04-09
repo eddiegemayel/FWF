@@ -1,0 +1,15 @@
+<h2>List</h2>
+
+<table>
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Color</th>
+    </tr>
+    <tr ng-repeat="car in cars track by $index">
+        <td><a href="#/detail/{{$index}}">{{car.make}}</a></td>
+        <td>{{car.model}}</td>
+        <td>{{car.color}}</td>
+        <td><button ng-click="delete($index)">Delete</button></td>
+    </tr>
+</table>

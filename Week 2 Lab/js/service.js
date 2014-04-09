@@ -24,4 +24,17 @@ angular.module("CarApp").service("carService", function(){
 
         return cars;
      } 
+
+     this.deleteCar=function(otherIndex){
+        cars.splice(otherIndex,1);
+        localStorage.setItem("carList", JSON.stringify(cars));
+        
+    };
+
+    this.addCar=function(car){
+        cars.push(car);
+                localStorage.setItem("carList", JSON.stringify(cars));
+        
+    document.location.hash = "#/list";
+    };
 });
