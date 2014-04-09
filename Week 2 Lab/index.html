@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title>List of Cars</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" type="text/javascript"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js" type="text/javascript"></script>
+    	<script src="js/app.js" type="text/javascript"></script>
+    	<script src="js/service.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>Car List</h1>
+		<div ng-app="CarApp">
+            <div ng-view></div>
+            <nav>
+                <a href="#/listView">List View</a>
+                <a href="#/detail">Details</a>
+                <a href="#/addItem">Add Item</a>
+            </nav>    
+        </div>
+	</body>
+
+</html>
