@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/service.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div ng-app="NewApp">
+            <nav>
+                <a href="#/list"> List </a>
+                <a href="#/details"> Details </a>
+            </nav>
+            <div ng-view="">
+                {{task}}
+            </div>
+        </div>
+    </body>
+</html>
+<!--//have an array that loads up from a data service. Return it to the view. Two routes, list iew, detail view.-->
