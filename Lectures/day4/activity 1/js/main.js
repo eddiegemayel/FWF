@@ -11,9 +11,9 @@ app.config(function($routeProvider){
     })
     .otherwise({redirectTo: "/list"});
 });
-app.controller("ListController", function($scope, service){
-    $scope.peopleList = service.getPeople();
+app.controller("ListController", function($scope, MLPService){
+    $scope.peopleList = MLPService.getData();
 });
-app.controller("DetailsController", function($scope, service, $routeParams){
-    $scope.pplDetail=service.getPerAt($routeParams.idx);
+app.controller("DetailsController", function($scope, MLPService, $routeParams){
+    $scope.pplDetail=MLPService.getItemAt($routeParams.idx);
 });
