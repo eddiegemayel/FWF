@@ -1,0 +1,17 @@
+[
+		"vehicle" , {
+			"make" : "BMW",
+			"model" : "Z3",
+			"color" : "Silver"
+		},
+		"vehicle" , {
+			"make" : "Porsche",
+			"model" : "911",
+			"color" : "White"
+		},
+		"vehicle" , {
+			"make" : "Mercedes",
+			"model" : "SLS",
+			"color" : "Black"
+		}
+]
