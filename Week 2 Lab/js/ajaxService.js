@@ -20,7 +20,7 @@ angular.module("CarApp").service("carService", function($http){
 		return cars;
 	}
 
-	this.getItemAt = function(idx){
+	this.getCarAt = function(idx){
 		if(cars[idx]){
 			return cars[idx];
 		}

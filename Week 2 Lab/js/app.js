@@ -29,7 +29,7 @@ app.controller("theList", function($scope, carService){
 });
 
 app.controller("theDetail", function($scope, carService, $routeParams){
-    $scope.car = carService.getCarAt($routeParams.carIndex);
+    $scope.carDetail = carService.getCarAt($routeParams.carIndex);
 });
 
 app.controller("theAdd", function($scope,carService){
