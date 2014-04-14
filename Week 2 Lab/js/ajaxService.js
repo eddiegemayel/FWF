@@ -3,7 +3,7 @@ angular.module("CarApp").service("carService", function($http){
 	var cars = [];
 
 	this.getCars = function(){
-		if(cars.length !== undefined){
+		if(cars.length === 0){
 			$http.get("js/json/data.json")
 				.success(function(data, status, headers, config){
 					 console.log(data);
