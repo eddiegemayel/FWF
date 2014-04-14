@@ -35,7 +35,7 @@ angular.module("CarApp").service("carService", function(){
         cars.push(car);
                 localStorage.setItem("carList", JSON.stringify(cars));
         
-    document.location.hash = "#/list";
+    	document.location.hash = "#/list";
     };
 
     this.getCarAt = function(carIndex){
