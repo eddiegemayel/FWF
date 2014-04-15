@@ -1,11 +1,11 @@
 angular.module("CarApp").service("carService", function($http){
 
-	//empt array to store json data in
+	//empty array to store json data in
 	var cars = [];
 
 	this.getCars = function(){
 
-		//not sure if this is supposed to be here
+		//not sure if this is supposed to be here but it works
 		var carList =  localStorage.getItem("carList");
         cars = JSON.parse(carList) || cars;
 
