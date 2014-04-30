@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5{
+	font-family: 'Alegreya SC', serif;
+}
+
+p, a{
+	font-family: 'Quicksand', sans-serif;
+	text-decoration: none;
+
+}
+
+body{
+	background-image: url(../images/pentagon.png);
+}
+
+nav{
+	margin: 0 auto;
+	text-align: center;
+}
+
+ul{
+	list-style-type: none;
+}
+
+h1{
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h2{
+	font-size: 50px;
+	text-align: center;
+}
+
+img{
+	border: 2px solid black;
+}
+
+.info{
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}

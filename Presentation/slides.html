@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>batman.js</title>
+		<title>Meteor.js</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -34,36 +34,34 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>jCarousel</h1>
+					<h1>Meteor.js</h1>
 					<h4>Gotten from:</h4>
 					<p>
-						<a href="http://sorgalla.com/jcarousel/" target="blank"><small>http://sorgalla.com/jcarousel/</small></a>
+						<a href="https://www.meteor.com/" target="blank"><small>www.meteor.com</small></a>
 					</p>
 				</section>
 				
 				<section>
 					<section>
-						<h2>Concept Behind jCarousel</h2>
+						<h2>Concept Behind Meteor</h2>
 						<br/>
 						<ul>
-							<li>A jQuery plugin</li>
-							<li>Used for organizing lists of elements</li>
-							<li>Commonly used for images</li>
-							<li>Similar to Foundation's "Orbit"</li>
+							<li>A javascript framework</li>
+							<li>Installed via Terminal Command ; no download available</li>
+							<li>Runs off of thier server (localhost:3000)</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Required Files</h2>
 						<ul>
-							<li>The "jcarousel.js" file</li>
-							<li>Latest jQuery</li>
-							<li>HTML and CSS of course</li>
-							<li>main.js</li>
+							<li>An HMTL File</li>
+							<li>myapp.js</li>
+							<li>CSS (optional)</li>
 						</ul>
 					</section>
-					<section>
+					<!-- <section>
 						<h2>Example</h2>
-					</section>
+					</section> -->
 				</section>
 
 				<section>
@@ -71,52 +69,47 @@
 					<h2>index.html</h2>
 					<pre>
 						<code data-trim contenteditable>
+&lthead&gt
+  &lttitle&gtDemo&lt/title&gt
+  &ltlink rel="stylesheet/css" href="css/myapp.css"/&gt
+&lt/head&gt
 
+&ltbody&gt
+  {{&gt hello}}
+&lt/body&gt
+
+<template name="hello">
+  <h1>Hi!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
 						</code>
 					</pre>
 				</section>
 				<section>
-					<h2>main.js</h2>
+					<h2>myapp.js</h2>
 					<pre>
-						<code>
+						<code data-trim contenteditable> 
 
-(function($){
-	$(function() {
+if (Meteor.isClient) {
+  Template.hello.greeting = function () {
+    return "This will be a greeting";
+  };
 
-	//Initialize the JCarousel
-   	$('.jcarousel').jcarousel({
+  Template.hello.events({
+    'click input': function () {
+      // template data, if any, is available in 'this'
+      if (typeof console !== 'undefined')
+        console.log("You pressed the button");
+    }
+  });
+}
 
-	//Wrap around to first or last list item
-  	wrap:"both"
-   	});
-
-   		 //Previous Button
-        $('.jcarousel-control-prev')
-        	//When clicked, move back 1 list item
-            .jcarouselControl({
-                target: '-=1'
-            });
-
-          //Next Button
-        $('.jcarousel-control-next')
-        	//When clicked, move forward one list item
-            .jcarouselControl({
-                target: '+=1'
-            });
-
-          //Pagination
-        $('.jcarousel-pagination')
-        	//Which dot gets highlighted
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
-            })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
-            })
-
-            .jcarouselPagination();
-    });
- })(jQuery);
+if (Meteor.isServer) {
+  Meteor.startup(function () {
+    // code to run on server at startup
+  });
+}
 
 						</code>
 					</pre>
