@@ -43,77 +43,65 @@
 				
 				<section>
 					<section>
-						<h2>Concept Behind Meteor</h2>
+						<h2>What's Meteor?</h2>
 						<br/>
 						<ul>
 							<li>A javascript framework</li>
 							<li>Installed via Terminal Command ; no download available</li>
-							<li>Runs off of thier server (localhost:3000)</li>
+							<li>Runs off of their server (localhost:3000)</li>
 						</ul>
 					</section>
-					<section>
-						<h2>Required Files</h2>
-						<ul>
-							<li>An HMTL File</li>
-							<li>myapp.js</li>
-							<li>CSS (optional)</li>
-						</ul>
-					</section>
-					<!-- <section>
-						<h2>Example</h2>
-					</section> -->
 				</section>
+
 
 				<section>
 					<section>
-					<h2>index.html</h2>
-					<pre>
-						<code data-trim contenteditable>
-&lthead&gt
-  &lttitle&gtDemo&lt/title&gt
-  &ltlink rel="stylesheet/css" href="css/myapp.css"/&gt
-&lt/head&gt
+						<h2>Getting Set up via Terminal Commands</h2>
+						<br/>
+						<h3>Step 1: Install it</h3>
+						<pre>
+							<code>
+$ curl https://install.meteor.com | /bin/sh
+							</code>
+						</pre>
+					</section>
+					<section>
+						<br/>
+						<h3>Step 2: Create Your Project</h3>
+						<pre>
+							<code>
+$ meteor create myapp
+							</code>
+						</pre>
+					</section>
+					<section>
+						<br/>
+						<h3>Step 3: Run It Locally</h3>
+						<pre>
+							<code>
+$ cd myapp
 
-&ltbody&gt
-  {{&gt hello}}
-&lt/body&gt
+$ meteor
+							</code>
+						</pre>
+					</section>
 
-<template name="hello">
-  <h1>Hi!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
-</template>
-						</code>
-					</pre>
+					<section>
+						<br/>
+						<h3>Step 4: (Optional) Deploy</h3>
+						<pre>
+							<code>
+$ meteor deploy myapp.meteor.com
+							</code>
+						</pre>
+					</section>
+
 				</section>
+
+
+
 				<section>
-					<h2>myapp.js</h2>
-					<pre>
-						<code data-trim contenteditable> 
-
-if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "This will be a greeting";
-  };
-
-  Template.hello.events({
-    'click input': function () {
-      // template data, if any, is available in 'this'
-      if (typeof console !== 'undefined')
-        console.log("You pressed the button");
-    }
-  });
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
-
-						</code>
-					</pre>
-				</section>
+					<h2>CODE TIME</h2>
 				</section>
 				<section>
 					<h1>The End!</h1>
